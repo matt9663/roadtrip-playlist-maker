@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Roadtrip Playlist Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <section class="contentArea" id="landing">
+            <h1>Landing Page</h1>
+            <h2>Where would you like go?</h2>
+            <div class="formContainer">
+                <form>
+                    <fieldset>
+                        <legend>Starting Point</legend>
+                        <input type="text" class="address-input" id="startAddress1" placeholder="Street name" required>
+                        <input type="text" class="address-input" id="startAddress2" placeholder="Apt, Floor, etc.">
+                        <input type="text" class="address-input" id="startCity" placeholder="City" required>
+                        <input type="text" class="address-input" id="startState" placeholder="State" required>
+                        <input type="text" class="address-input" id="startZip" placeholder="Zip">
+                        <input type="text" class="address-input" id="startCountry" placeholder="Country" required>
+                    </fieldset>
+                </form>
+                <form>
+                        <fieldset>
+                            <legend>End Point</legend>
+                            <input type="text" class="address-input" id="endAddress1" placeholder="Street name" required>
+                            <input type="text" class="address-input" id="endAddress2" placeholder="Apt, Floor, etc.">
+                            <input type="text" class="address-input" id="endCity" placeholder="City" required>
+                            <input type="text" class="address-input" id="endState" placeholder="State" required>
+                            <input type="text" class="address-input" id="endZip" placeholder="Zip">
+                            <input type="text" class="address-input" id="endCountry" placeholder="Country" required>
+                        </fieldset>
+                    </form>
+                    <input type="submit" class="address-submit" value="Let's Go">
+            </div>
+        </section>
+        <section class="contentArea" id="musicSpecArea">
+            <h1>Music Specification Page</h1>
+            <h2>Your trip will take X hours and X minutes. <br>What kind of music would you like to hear along the way?</h2>
+            <form>
+                <input type="radio" name="searchType" value="artist" required checked> Artist<br>
+                <input type="radio" name="searchType" value="genre" required> Genre<br>
+                <input type="text" name="searchTerm" class="music-parameter" placeholder="What should we base your playlist on?" required>
+                <input type="submit" class="makePlaylist" value="Build My Playlist">
+            </form>
+        </section>
+        <section class="contentArea" id="playlistDisplay">
+            <h1>Playlist Display</h1>
+            <h2>Enjoy your trip!</h2>
+            <div class="playlistHolder">
+                <ul>
+                    <li>This box will display the track info of all the songs that are included in the playlist once it's been generated.</li>
+                </ul>
+            </div>
+            <div class="buttonHolder">
+                <input type="button" class="lastButtons" id="saveButton" value="Save Your Playlist">
+                <input type="button" class="lastButtons" id="resetButton" value="Start Over">
+            </div>
+         </section>
+    </main>    
+</body>
