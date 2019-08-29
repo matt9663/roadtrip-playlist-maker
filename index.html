@@ -13,39 +13,36 @@
         <section class="contentArea" id="landing">
             <h1>Landing Page</h1>
             <h2>Where would you like go?</h2>
-            <div class="formContainer">
                 <form>
                     <fieldset>
                         <legend>Starting Point</legend>
-                        <input type="text" class="address-input" id="startAddress1" placeholder="Street name" required>
-                        <input type="text" class="address-input" id="startAddress2" placeholder="Apt, Floor, etc.">
-                        <input type="text" class="address-input" id="startCity" placeholder="City" required>
-                        <input type="text" class="address-input" id="startState" placeholder="State" required>
-                        <input type="text" class="address-input" id="startZip" placeholder="Zip">
-                        <input type="text" class="address-input" id="startCountry" placeholder="Country" required>
+                        <input type="text" class="start-address-input" id="startAddress1" placeholder="Street name">
+                        <input type="text" class="start-address-input" id="startAddress2" placeholder="Apt, Floor, etc.">
+                        <input type="text" class="start-address-input" id="startCity" placeholder="City">
+                        <input type="text" class="start-address-input" id="startState" placeholder="State">
+                        <input type="text" class="start-address-input" id="startZip" placeholder="Zip">
+                        <input type="text" class="start-address-input" id="startCountry" placeholder="Country">
                     </fieldset>
-                </form>
-                <form>
-                        <fieldset>
-                            <legend>End Point</legend>
-                            <input type="text" class="address-input" id="endAddress1" placeholder="Street name" required>
-                            <input type="text" class="address-input" id="endAddress2" placeholder="Apt, Floor, etc.">
-                            <input type="text" class="address-input" id="endCity" placeholder="City" required>
-                            <input type="text" class="address-input" id="endState" placeholder="State" required>
-                            <input type="text" class="address-input" id="endZip" placeholder="Zip">
-                            <input type="text" class="address-input" id="endCountry" placeholder="Country" required>
-                        </fieldset>
-                    </form>
+                    <fieldset>
+                        <legend>End Point</legend>
+                        <input type="text" class="address-input" id="endAddress1" placeholder="Street name">
+                        <input type="text" class="address-input" id="endAddress2" placeholder="Apt, Floor, etc.">
+                        <input type="text" class="address-input" id="endCity" placeholder="City">
+                        <input type="text" class="address-input" id="endState" placeholder="State">
+                        <input type="text" class="address-input" id="endZip" placeholder="Zip">
+                        <input type="text" class="address-input" id="endCountry" placeholder="Country">
+                    </fieldset>
                     <input type="submit" class="address-submit" value="Let's Go">
-            </div>
+                </form>
+                <h3 class=errorMessage></h3>
         </section>
         <section class="contentArea" id="musicSpecArea">
             <h1>Music Specification Page</h1>
-            <h2>Your trip will take X hours and X minutes. <br>What kind of music would you like to hear along the way?</h2>
+            <h2>Your trip will take <span class="hourAmount">X</span> hour(s) and <span class='minuteAmount'>X</span> minutes. <br>What kind of music would you like to hear along the way?</h2>
             <form>
                 <input type="radio" name="searchType" value="artist" required checked> Artist<br>
                 <input type="radio" name="searchType" value="genre" required> Genre<br>
-                <input type="text" name="searchTerm" class="music-parameter" placeholder="What should we base your playlist on?" required>
+                <input type="text" name="searchTerm" class="music-parameter" placeholder="What should we base your playlist on? (max 5 selections)" required>
                 <input type="submit" class="makePlaylist" value="Build My Playlist">
             </form>
         </section>
